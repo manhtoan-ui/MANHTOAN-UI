@@ -1,0 +1,26 @@
+h1{
+    color:red;
+}
+p{
+    color:rgb(71, 149, 227);
+    font-size: 15px;
+    line-height:1.5;
+    text-align: justify; /*left right center justify */
+    font-family:"Roboto", sans-serif;;
+    font-weight:400;
+    text-decoration: underline ;/*line-through overline *//*gach chan*/
+    text-transform: uppercase; /*viet hoa hay thuong*//*lowercase capitalize none */
+    width: 600px; /*do rong*/
+    font-style : italic;
+    word-spacing: 0.5px;
+    background-color:rgb(114, 175, 143) ;
+    border-bottom: 2px solid yellow;
+} 
+a{
+    color:rgb(95, 95, 124);
+}
+body{
+background-image: url("../images/thlone.png");
+background-size : cover;
+}
+
