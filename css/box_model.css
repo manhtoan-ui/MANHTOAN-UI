@@ -1,0 +1,42 @@
+div{
+    Width:calc(25% - 30px);
+    float:left;/*left right none*/
+    /* height:200px; it dung */
+    margin: 10px 15px 20px;/*neu thieu no se lay cai doi dien*/
+    /* margin-top: 10px;
+    margin-left:10px;
+    margin-bottom: 10;
+    margin-right: 10px;
+    */
+    border:1px solid red;
+    /*
+    border-top
+    border-left
+    border-right
+    border-bottom 
+     */
+     padding:10px 15px 15px 15px;
+     /* chuc nang cua no voi margin la nhu nhau */
+     box-sizing:border-box;
+     box-shadow:5px 6px 9px grey;
+     /* tao bong */
+     border-radius: 6px;
+     /* transform:translate(20px,150px); dich chuyen sang phai va xuong duoi*/
+     /* transform:rotate(5deg); */    /*do nghieng*/
+    /* transform:scale(1.5); */
+    transition: all 300ms;
+} 
+     div:hover{
+     transform:rotate(5deg);
+     background-color: green;
+}
+img{
+     max-width: 100%;
+}
+#special{
+    background-color:pink;
+}
+.xyz{
+    background-color:aquamarine; 
+    /* dung bao nhieu thang cung duoc */
+}
