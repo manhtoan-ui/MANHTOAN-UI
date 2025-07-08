@@ -15,7 +15,7 @@ h4 {
 }
 .cv-container
  {
-    width: 1000px;
+    width: 800px;
     margin: 30px auto;
     /* canh giữa */
     /* hoặc dùng float nếu bạn không dùng flex */
