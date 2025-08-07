@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="section main">
+        <div class="container">
+            <img id="icon" src="#" alt="ảnh thời tiết"> <br>
+            <input onkeyup="searchWeather(event)" placeholder="nhap vo " id="city" name="city" value="">
+
+            <h1 id="option"><span>thời tiết</span></h1>
+            <p>pricipitation : <span id="fell"></span></p>
+            <p>humidity: <span id="item2"></span></p>
+            <p>wind: <span id="wind"></span></p>
+        </div>
+    </main>
+    <script type="text/javascript">
+        function searchWeather(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault(event);
+                var ip = document.getElementById("city");
+                var city = ip.value;
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`
+                fetch(url).then(rs => rs.json())
+                    .then(rs => {
+                        document.getElementById("option").innerHTML = rs.main.temp +"°C";
+                        document.getElementById("fell").innerHTML = rs.main.feels_like;
+                        document.getElementById("item2").innerHTML = rs.main.humidity;
+                        document.getElementById("wind").innerHTML = rs.wind.speed;
+                        for (var i = 0; i < rs.weather.length; i++) {
+                            var icon = rs.weather[i].icon;
+                            document.getElementById("icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+                        }
+                    }
+
+                    );
+            }
+
+        }
+    </script>
+</body>
+
+</html>

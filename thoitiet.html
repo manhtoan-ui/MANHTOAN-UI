@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 300ms;
+        }
+
+        .weather-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .weather-card {
+            background: rgba(173, 200, 235, 0.957);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            color: rgb(230, 227, 233);
+        }
+
+        .weather-card img {
+            width: 50px;
+            height: 50px;
+        }
+
+        body {
+            background-image: url(images/milkeyway.jpg.jpg);
+        }
+
+        .center {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .main {
+            margin-top: 8px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <main class="container">
+        <div class="content">
+            <img class="img" src="#" alt="ảnh thời tiết" id="img">
+            <p class="date" id="date"></p>
+            <h2 class="temp" id="temp"></h2>
+            <p class="text" id="text"></p>
+        </div>
+    </main>
+    <script>
+        const url = "https://api.openweathermap.org/data/2.5/forecast?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric"
+        fetch(url).then(rs => rs.json())
+        .then(rs=>{
+            document.getElementById("date").innerHTML=rs.list[i].weather[0].temp;
+        })
+
+
+
+    </script>
+
+    <!--   <main class="section main"> 
+        
+        <div class="container">
+            <h1 class="weather">thời tiết</h1>
+            <img id="img" src="#" alt="ảnh thời tiết">
+            <p id="date"></p>
+        </div>
+    </main> -->
+
+    <!--<script type="text/javascript">
+        const url = "https://api.openweathermap.org/data/2.5/forecast?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric"
+        fetch(url).then(rs => rs.json())
+            .then(rs => {
+
+                //  for( var i=0;i<rs.list.length;i++){
+                //     for(var j=0;j<rs.list.weather.length;j++){
+                //     var icon = rs.list[i].weather[j].icon;
+                //     document.getElementById("img").src = ` https://openweathermap.org/img/wn/10d@2x.png `
+                //     document.getElementById("date").innerText = rs.list[i].dt_txt
+                //  }}
+                for (var i = 0; i < rs.list.length; i++) {
+                    var icon = rs.list[i].weather[0].icon;
+                    var time = rs.list[i].dt_txt;
+
+                    container.innerHTML += `
+        <div class="weather-card">E
+          <p>${time}</p>
+          <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="weather">
+        </div>
+      `;
+                }
+            })
+    </script> -->
+    <!-- <div class="center">
+        <input type="text" placeholder="enter here" value="" id="event" name="city" onkeyup="searchWeather(event)">
+    </div>
+    <main class="main">
+        <div class="weather-container" id="weather-container"> -->
+    <!-- Dữ liệu sẽ được thêm bằng JavaScript -->
+    <!-- </div>
+    </main>
+    <script type="text/javascript">
+        function searchWeather(event) {
+            if (event.keyCode === 13) {
+                var ip = document.getElementById("event");
+                var city = ip.value;
+                const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`
+
+                fetch(url)
+                    .then(res => res.json())
+                    .then(rs => {
+                        const container = document.getElementById("weather-container");
+                        container.innerHTML = "";
+                        for (var i = 0; i < rs.list.length; i++) {
+                            var icon = rs.list[i].weather[0].icon;
+                            var time = rs.list[i].dt_txt;
+                            var temp = rs.list[i].main.temp;
+                            var des = rs.list[i].weather[0].description;
+
+
+         container.innerHTML += `
+        <div class="weather-card">
+          <p>${time}</p>
+          <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="weather">
+          <p>${temp}</p>
+          <p>${des}</p>
+        </div>
+      `;
+                        }
+                    });
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

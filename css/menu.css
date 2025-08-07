@@ -1,0 +1,14 @@
+.menu{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    display: flex;
+}
+.item .submenu{
+    display: None;
+}
+.item.active .submenu{
+    display: block;
+}
+li{
+    list-style-type:none;
+}

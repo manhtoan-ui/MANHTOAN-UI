@@ -1,0 +1,11 @@
+{
+  "name" : "dong ho casio",
+  "price":28,
+  "qty":15,
+  "thumbnail":"images/IMG_0516.JPG",
+  "review":{
+    "rate":5,
+    "qty":17
+  }
+
+}

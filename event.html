@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="f1();"  onmouseleave="f3();"  onmouseenter="f2();" type="button">Button demo</button>
+    <!-- sự kiện là click là bấm vô nhưng mà ở html là onclick -->
+     <!-- type="button" nút bấm dùng cho js không dùng cho html -->
+      <!-- mouseenter tức là chuột di chuyển vào thì sự kiện sảy ra
+       Nó giống như hover
+       Còn mousehover nó sẽ phát ra ngay khi lại gần ý là đi qua đường biên giới 
+       Độ nhạy khó tính toán nên ít dùng -->
+       <!-- mouseleave khi thoát ra thì cảnh báo hiện lên -->
+        <!-- nhóm mouseleave và mouseenter là mega menu -->
+         <!-- chuột chúng ta có các sự kiện như vậy -->
+         <input id="ip" onkeypress="key1();" onkeydown="key2();" onkeyup="key3();" type="text" name="search" placeholder="enter key..."/>
+        <!-- onkeypress là viết vô nó nhận-->
+         <!-- onkeydown là nhấn xuống nó nhận dù viết hay không viết -->
+          <!-- onkeyup là nhấn xuống xong thả ra nó nhận -->
+           <!-- khác nhau  -->
+            <!-- với form chúng ta có các sự kiện như vậy -->
+        <p id="text-search"></p>
+        <p id="text-search2"></p>
+        <select name="city" onchange="key4();">
+            <!-- onchange khi có sự thay đổi sự kiện mới chạy 
+             NGHĨA LÀ giá trị bị thay đổi -->
+            <option value="HN">Hà Nội</option>
+            <option value="SG">Sài Gòn</option>
+        </select>
+    <script  src="js/demoevent.js"> </script>
+
+    <!--  -->
+</body>
+</html>

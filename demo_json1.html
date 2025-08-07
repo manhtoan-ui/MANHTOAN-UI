@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="section main">
+        <div class="container">
+            <img src="#" id="images">
+            <h1 id="sp_name">Váy thời trang cao cấp dành cho hoa hậu</h1>
+            <p>giá tiền: <span id="sp_price"></span></p>
+            <p>số lượng:<span id="sp_qty"></span></p>
+            <p>rate: <span id="rating"></span></p>
+        </div>
+    </main>
+    <script type="text/javascript">
+        //call api 
+        const url = "http://127.0.0.1:5500/data/sanpham.json";
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+            //lay du lieu cua json va su dung trong nay
+            console.log(rs);
+             var sp_name = document.getElementById("sp_name");
+        sp_name.innerText = rs.name;
+        // lấy giá trị của object
+        var sp_price = document.getElementById("sp_price");
+        sp_price.innerText = rs.price;
+        var qty = document.getElementById("sp_qty");
+        qty.innerText = rs.qty;
+        document.getElementById("images").src =rs.thumbnail;
+        document.getElementById("rating").innerText=rs.review.rate;
+         console.log(rs.review.rate)
+        })
+        var sp = {
+            //1 object
+            name : "túi xách gucci",
+            price :125 ,
+            qty:5,
+            thumbnail:"images/IMG_0516.JPG"
+        }
+       
+    </script>
+</body>
+</html>

@@ -6,7 +6,26 @@
     <title>bài tập xác suất</title>
 </head>
 <body>
-    <script  src="js/baitap.js">  </script>
+    <script type="text/javascript">
+        function luckynumber(){
+            alert("wellcome to our game");
+            var lk = parseInt(Math.random()*100);
+        console.log(lk);  //cheating
+            //cho nguời chơi dự đoán
+            var n = prompt("nhập số mà bạn dự đoán");
+            n = parseInt(n);
+            // nguoi choi dat so tien muon cuoc
+            var m = prompt("nhập số mà bạn cược");
+            m = parseInt(m);
+            if(n === lk){
+                m = m * 70;
+                alert("chúc mừng bạn đã nhập đúng số" + "tiền thưởng là " + m);
+            }else{
+                alert("chúc bạn may mắn lần sau hẹ hẹ hẹ");
+            }
+        }
+        luckynumber();
+    </script> 
    
     
 </body>
