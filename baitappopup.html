@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPUP</title>
-    <link rel="stylesheet" href="css/popup.css"/>
-   </head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>POPUP</title>
+   <link rel="stylesheet" href="css/popup.css" />
+</head>
+
 <body>
-    <!-- <form>
+   <!-- <form>
     <p>nhập thông tin</p>
     <input type="text" name="full_name" placeholder="Tìm kiếm..." id="van"><br>
     <button>tìm</button>
@@ -18,13 +20,13 @@
         var van_ban = document.getElementById("van");
         van_ban =
      </script>-->
-     <!-- <form action="/regester" method="post" >
+   <!-- <form action="/regester" method="post" >
         <label for="username" ></label>
   <input type="text" name="username"  placeholder="Mời nhập..."> 
   <input type="password" name="password" placeholder="Mời nhập liệu..." id="username">
   <button type="submit" >Gửi</button>
 </form> -->
-<!-- <input id="name" value="" type="text" >
+   <!-- <input id="name" value="" type="text" >
 <button onclick="nam()">đưa tiền đây</button>
 <div id="namee"></div>
 <script>
@@ -36,37 +38,42 @@
 //    document.write(ten);
  }
 </script> -->
-<!-- <p id="name"></p>
+   <!-- <p id="name"></p>
 <script>document.getElementById("name").innerText ="<b> xin chào</b>"  </script>
   -->
-<heade id="item">
-       <button onclick="m()" type="button">
-         </header>
-   <main class="box" id="n">
-      <nav class="menu">
-         <div class="inbox">
-            <div class="exit">
-         <button class="nut">
-            <p>x</p>
-            </button>
-            <button></button>
-            </div>
-            <div>
-               <h1>creat a post</h1>
-               <a>lorem ipsum dolor sit amet consectetur adipisicing alit.Accusantium necessitatibus omnis , eaque ratione sunt commodil </a>
-            </div>
-            <div>
-                abc
-            </div>
-         </div>
-      </nav>
-   </main>
-<script type="text/javascript">
-   function m(){
-      var  item = document.getElementById("item");
-      
-   }
-</script>
+   <header id="container" class="menu">
+      <section class="item" id="item-1">
+         <button onclick="open(1)" type="button">
+            <span style="font-weight: 700;font-family: serif ;">show model</span>
+         </button>
+         <div class="table">
+            <!-- <h1>Model</h1>
+            <p>Đây là nội dung của model</p>
+            <button type="button" onclick="document.getElementById('item').classList.remove('active')">Close</button> -->
+            <div class="item" id="item-2">
+               <!-- <button type="button" onclick="m(n)">⇦</button> -->
+               <button type="button" onclick="close(1)">
+                  <span style="font-weight: 700;font-family: serif ;">x</span>
+               </button>
 
-</body> 
+            </div>
+
+         </div>
+
+
+      </section>
+   </header>
+   <script>
+      function open(n) {
+         var item = document.getElementById("item-" + n);
+         item.classList.add("active");
+      }
+      function close(n) {
+         var item = document.getElementById("item-" + n);
+         item.classList.remove("active");
+      }
+   </script>
+
+</body>
+
 </html>

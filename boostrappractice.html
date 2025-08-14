@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <style>
+        body {
+            background-color: #7e92a6;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-image: url('images/milkeyway.jpg');
+            background-size: cover;
+        }
+        .item {
+            background-color: #97a4b200;
+            border-radius: 10px;
+            
+        }
+        .item h3 {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .item img {
+            width: 100px;
+            height: auto;
+            transform: translate(150px, -100px);
+        }
+        .item h2{
+            font-size: 1.5rem;
+            color: #d7f1ef30;
+        }
+        .item .card-body {
+            height: auto;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+         <main>
+            <div class="container">
+                <div class="row" id="forescast">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card item">
+                            <div class="card-body text-white">
+                                <h3></h3>
+                                <h2></h2>
+                                <p></p>
+                                <img id="item" src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </main>
+         <script>
+            function forestcast() {
+                const url=`https://dummyjson.com/products?limit=20`
+                fetch(url).then(rs=>rs.json()
+                .then(rs=>{
+                    const list= rs.products;
+                    list.map(e=>{
+                        const item = `<img src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp" alt="Mascara">`;
+                        item.documentGetElementById("item").innerHTML = item;
+                    })
+                })
+            )
+            };
+            forestcast();
+           
+                
+         </script>
+</body>
+</html>
+// <!-- <div class="col-xl-3 col-md-6 mb-4">
+//                                     <div class="card item">
+//                                         <div class="card-body text-white">
+//                                             <h3>${e.dt_txt}</h3>
+//                                             <h2>${e.main.temp} <sup>o</sup>C</h2>
+//                                             <p>${e.weather[0].description}</p>
+//                                             <img src="https://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png"/>
+//                                         </div>
+//                                     </div> -->

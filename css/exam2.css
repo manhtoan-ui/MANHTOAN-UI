@@ -91,3 +91,8 @@
         img{
             max-width: 100%;
         }
+        img:hover {
+            transition: transform 0.3s ease;
+            transform:rotate(5deg);
+        }
+            

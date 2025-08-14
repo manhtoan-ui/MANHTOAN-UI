@@ -1,13 +1,15 @@
 body {
     
-    background: black;
+    background: rgb(215, 197, 197);
     position: relative;
     height:  100vh;;
 }
 
-.box {
+.item .table{
     display: none;
-    width: 200px;
+    width: 50%;
+     
+    /* width: 200px;
     height: 200px;  
     background: coral;
     position: absolute;
@@ -15,21 +17,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px; 
-    margin: 0;
+    margin: 0; */
 }
-.nut{
 
- font-size:10px; 
- aspect-ratio: 1 / 1;
- float: right;
-
- 
+.item.active .table{
+    display: block;
+    position: relative;
 }
-.inbox{
-    margin: 7px 10px;
-    padding: auto;
-}
-h1{
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    font-size: 12px;
+.item.active .item#item-2 button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
 }

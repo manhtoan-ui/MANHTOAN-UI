@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/layout.css"/>
-    <link rel="stylesheet" href="css/form.css"/>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/form.css" />
 </head>
+
 <body>
-   <body>
-    <header class="section header">
-        <div class="container ">
-          <h1>header</h1>
-          <img src="/images/nguyenthitrucmai.png" alt="ảnh model">
-        </div>
 
-    </header>
-    <nav class="section nav">
-        <div class="container">
-            <h2>navigator</h2>
-        </div>
-    </nav>
-    <main class="section main">
-        <div class="container three-columns">
-            <h3>main content</h3>
-            <aside class="a-left">
-                <h2>aside left</h2>
-            </aside>
-            <section class="content">
-                <h2>form demo</h2>
-                <!-- form demo -->
-                 <form method="get" action="a">
-                    <div class="form-group">
-                    <label for="name">name</label>
-                    <input type="text" name="full_name" placehoder="Enter your full name." required />
-                    </div>
-                    <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placehoder="enter your email." required/>
-                     </div>
-                     <div class="form-group">   
-                    <label for="telephone">telephone</label>
-                    <input type="tel" name="telephone" placehoder="enter your telephone" required/>
-                     </div>
-                    <div class="form-group">   
-                    <label for="dob">date of birth</label>
-                    <input type="date" name="dob"/>
-                     </div>   
-                    <div class="form-group">
-                        <label for="passpword">password</label>
-                        <input type="password" name="password" placehoder="enter your password." required/>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <input type="radio" name="gender" value="male"/>male
-                        <input type="radio" name="gender" value="female"/>female
+    <body>
+        <header class="section header">
+            <div class="container ">
+                <h1>header</h1>
+                <img src="/images/nguyenthitrucmai.png" alt="ảnh model">
+            </div>
 
-                    </div>
-                    <div class="form-group">
-                        <label for="weight">weight</label>
-                        <input type="number" name="weight" placehoder="enter your weight in kg." required/>
-                    </div>
-                    <div>
-                        <label for="avatar">Avatar</label>
-                        <input type="color" name="my_color"/>
+        </header>
+        <nav class="section nav">
+            <div class="container">
+                <h2>navigator</h2>
+            </div>
+        </nav>
+        <main class="section main">
+            <div class="container three-columns">
+                <h3>main content</h3>
+                <aside class="a-left">
+                    <h2>aside left</h2>
+                </aside>
+                <section class="content">
+                 <h2>form demo</h2>
+                     <!-- form demo  -->
+                    <form method="get" action="a">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" name="full_name" placehoder="Enter your full name." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placehoder="enter your email." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">telephone</label>
+                            <input type="tel" name="telephone" placehoder="enter your telephone" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">date of birth</label>
+                            <input type="date" name="dob" />
+                        </div>
+                        <div class="form-group">
+                            <label for="passpword">password</label>
+                            <input type="password" name="password" placehoder="enter your password." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <input type="radio" name="gender" value="male" />male
+                            <input type="radio" name="gender" value="female" />female
 
-                    </div>
-                    <div class="form-group">
-                        <label for="my_time">My time</label>
-                        <input type="time" name="my_time"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="terms">i</label>
-                        <input type="checkbox" name="terms" value="agree" id="terms"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="city">City
-                        </label>
-                        <select name="city">
-                            <option value="hanoi">HÀ NỘI</option>
-                            <option value="danang">Đà nẵng</option>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">weight</label>
+                            <input type="number" name="weight" placehoder="enter your weight in kg." required />
+                        </div>
+                        <div>
+                            <label for="avatar">Avatar</label>
+                            <input type="color" name="my_color" />
 
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">adress: </label>
-                        <textarea name="address" rows="s" placehoder="Enter your address here."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Submit</button>
-                        <button type="reset">reset</button>
-                        <button type="button">Button</button>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="my_time">My time</label>
+                            <input type="time" name="my_time" />
+                        </div>
+                        <div class="form-group">
+                            <label for="terms">i</label>
+                            <input type="checkbox" name="terms" value="agree" id="terms" />
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City
+                            </label>
+                            <select name="city">
+                                <option value="hanoi">HÀ NỘI</option>
+                                <option value="danang">Đà nẵng</option>
 
-
-                 </form>
-            </section>
-            <aside class="a-right">
-            <h2>aside right</h2>
-            </aside>
-            
-            
-        </div>
-    </main>
-    <footer class="section footer">
-        <div class="container">
-            <h2>footer</h2>
-        </div>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">adress: </label>
+                            <textarea name="address" rows="10" cols="30" placehoder="Enter your address here."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                            <button type="reset">reset</button>
+                            <button type="button">Button</button>
+                        </div>
 
 
-    </footer> 
-</body>
+                    </form>
+                </section>
+                <aside class="a-right">
+                    <h2>aside right</h2>
+                </aside>
+
+
+            </div>
+        </main>
+        <footer class="section footer">
+            <div class="container">
+                <h2>footer</h2>
+            </div>
+
+
+        </footer>
+    </body>
+
 </html>
